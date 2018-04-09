@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<!-- INTRODUCTION -->
+
+<!-- The purpose of this program is to generate a web page that looks like the "Comparisons" page in the homework instructions.
+
+  HEAD -->
+
+  <head>
+
+    <!-- META TAG
+    
+    Metadata about the HTML document.
+    "charset" attribute sets HTML document's character encoding. -->
+
+    <meta charset="UTF-8">
+
+    <!-- "name" attribute to give the HTML document's description, keywords, author, dimension and scaling. -->
+
+    <meta name="description" content="Data Science Bootcamp Project">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Matteo Recagni">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- http-equiv" attribute to make the page compatible with Internet Explorer's highest version. -->
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- TITLE TAG -->
+
+    <title>Bootstrap Visualization Dashboard</title>
+
+    <!-- SHEET STYLE ATTRIBUTE OF THE LINK TAG
+    <link> tag to define the link between the HTML document and the external style sheets. -->
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" media="screen">
+    <link rel="stylesheet" href="assets/css/styles.css" media="screen">
+
+  </head>
+
+  <!-- BODY -->
+
+  <body>
+
+    <!-- NAVIGATION BAR -->
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid navbar-custom">
+        <div class="navbar-header">
+
+          <!-- <button> class to define the buttons in the navigation bar. -->
+
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+            aria-expanded="false">
+            
+            <!-- <span> tag to specify informration for screen readers and the icon bar. -->
+
+            <span class="sr-only">Toggle Navigation</span>
+            <span class="icon-bar"></span>
+
+          </button>
+
+          <!-- Set column width for "Lattitude" at 1/12th of mobile phone screen. -->
+
+          <div class="col-xs-1 phone-nav">
+            <a class="navbar-brand" href="index_solved_by_me.html" id="logo">Lattitude</a>
+          </div>
+        </div>
+
+        <!-- We now gather all the navigation links, forms, and the other content for toggling. -->
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+          <!-- <ul> (unordered list) tag to define the bulleted list. -->
+
+          <ul class="nav navbar-nav navbar-right navbar-right-custom">
+
+            <!-- <li> to define the list items of the dropdown box. -->
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                Plots <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="visualizations/MaxTemp.html">Max Temperature</a></li>
+                <li><a href="visualizations/Humidity.html">Humidity</a></li>
+                <li><a href="visualizations/Cloudiness.html">Cloudiness</a></li>
+                <li><a href="visualizations/WindSpeed.html">Wind Speed</a></li>
+              </ul>
+            </li>
+
+            <!-- List items connecting this site to the other pages of this project. -->
+
+            <li><a href="index_solved_by_me.html">Index</a></li>
+            <li><a href="data_solved_by_me.html">Data</a></li>
+
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <!-- CONTAINER 
+    Containing the main text of the page. -->
+
+    <div class="container">
+
+      <!-- There's not much of an article in this page, with just four pictures and their captions, but anyway technically this is 
+      indeed the "article" section of the container. -->
+
+      <article class="description-content row">
+
+        <!-- This is the header, large the entire screen width. -->
+        <div class="col-xs-12">
+          <h1 class="description-header">Comparison: Latitude vs X</h1>
+          <hr class="description-hr"/>
+          <p class="description-text">Click any plot to get an in-depth analysis.</p>
+        </div>
+
+        <!-- These are the four pictures, captions, and links to the related pages, each of them large half of the screen. -->
+
+        <div class="col-md-6">
+          <h2 class="comparison-header">vs. Max Temperature</h2>
+          <a href="visualizations/MaxTemp.html"><img src="assets/images/Fig1.png" alt="Latitude vs. Max Temperature" 
+            class="comparison-image img-responsive"></a>
+          <hr class="visible-xs visible-sm">
+        </div>
+        
+        <div class="col-md-6">
+          <h2 class="comparison-header">vs. Humidity</h2>
+          <a href="visualizations/Humidity.html"><img src="assets/images/Fig2.png" alt="Latitude vs. Humidity" 
+            class="comparison-image img-responsive"></a>
+          <hr class="visible-xs visible-sm">
+        </div>
+        
+        <div class="col-md-6">
+          <h2 class="comparison-header">vs. Cloudiness</h2>
+          <a href="visualizations/Cloudiness.html"><img src="assets/images/Fig3.png" alt="Latitude vs. Cloudiness" 
+            class="comparison-image img-responsive"></a>
+          <hr class="visible-xs visible-sm">
+        </div>
+        
+        <div class="col-md-6">
+          <h2 class="comparison-header">vs. Wind Speed</h2>
+          <a href="visualizations/WindSpeed.html"><img src="assets/images/Fig4.png" alt="Latitude vs. Wind Speed" 
+            class="comparison-image img-responsive"></a>
+        </div>
+
+      </article>
+
+    </div>
+
+    <!-- FOOTER 
+    Same as for the landing page. -->
+
+
+    <footer class="footer navbar-fixed-bottom">
+        <div class="two-toned-footer-color"></div>
+        <p class="text-muted text-muted-footer text-center"> &copy; Copyright Coding Bootcamp 2017</p>
+      </footer>
+  
+      <!-- jQuery CDN -->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  
+      <!-- Bootstrap CDN -->
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+  </body>
+  
+</html>

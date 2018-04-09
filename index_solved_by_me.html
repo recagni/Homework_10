@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- INTRODUCTION -->
+
+<!-- The purpose of this program is to generate a web page that looks like the "Landing" page in the homework instructions.
+
+  HEAD -->
+
+  <head>
+
+    <!-- META TAG
+    The <meta> tag provides metadata about the HTML document. 
+    Although not displayed on the page, metadata are machine parsable. 
+    Meta elements are typically used to specify the page description, keywords, author, last modified, and other metadata.
+    The "charset" attribute of the <meta> tab specifies the character encoding for the HTML document. -->
+
+    <meta charset="utf-8">
+    
+    <!-- The "name" attribute of the <meta> tag defines a description, keywords, and the author of an HTML document. 
+    It also defines the viewport to control the page's dimensions and scaling for different devices. -->
+
+    <meta name="description" content="Data Science Bootcamp Project">
+    <meta name="keywords" content="HTML,CSS,JavaScript">
+    <meta name="author" content="Matteo Recagni">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- The "X-UA-Compatible" value assigned to the "http-equiv" attribute of the <meta> tag allows web authors to choose the 
+    version of Internet Explorer to be used to render the page.
+    By giving to the "content" attribute the value "ie-edge" we tell Internet Explorer to display content in the highest mode 
+    available (e.g., for Internet Explorer 9, IE9 is the highest mode available). 
+    Not using this line of code may result in not being able to render the page if the user is using some older version of the
+    browser. -->
+
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <!-- TITLE TAG
+    Bootstrp is a very popular open-source toolkit for developing in HTML, CSS, and JS.
+    The <title> tag captures the label that appears in the page tag, at the top of screen. -->
+
+    <title>Bootstrap Visualization Dashboard</title>
+
+    <!-- SHEET STYLE ATTRIBUTE OF THE LINK TAG
+    The <link> tag defines a link between a document and an external resource and is used to link to external style sheets.
+    The "rel" attribute of the <link> tag is used to define the relationship ("rel") between the linked file and the HTML document. 
+    While rel="stylesheet" specifies a persistent or preferred style (i.e., one that is always applied when style sheets are enabled),
+    rel="alternate stylesheet" defines an alternate style. 
+    The remaining attributes of the tag specify where to find the stylesheet ("href", in this case, the folder assets/css) and the 
+    "media" used (in this case, a screen). -->
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" media="screen">
+
+    <!-- CSS (Cascading Style Sheets) describes how HTML elements are going to be displayed on screen, paper, or in other media, and can 
+    control the layout of multiple pages all at once.
+    In this case, we are adding CSS to our HTML elements internally, meaning by using a "style" element in the "head" section of our 
+    file.  CSS could have also be added by using the "inline" method (using the style attribute in HTML elements) or the "external" 
+    method (using an external CSS file). -->
+
+    <link rel="stylesheet" href="assets/css/styles.css" media="screen">
+
+  </head>
+
+  <!-- BODY -->
+
+  <body>
+
+    <!-- NAVIGATION BAR
+    A navigation bar is a navigation header that is placed at the top of the page.
+    With Bootstrap, a navigation bar can extend or collapse, depending on the screen size.
+    A classic navigation bar (colored text on white background) can be added with the next lines of code, which start with the <nav> 
+    tag and continue with various <div> tags (container units that encapsulate other page elements and divide the HTML document into 
+    different sections).
+    The "container-fluid" value assigned to the aatribute "class" of the <div> tag creates a full width container, spanning the entire
+    width of your viewport. -->
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid navbar-custom">
+        <div class="navbar-header">
+
+          <!-- The "type" attribute of the <button> tag specifies the type of button among the following ones: (a) "button": classic 
+          clickable button; (b) "submit": submits form-data; (c) "reset": resets the form-data to its initial values).
+          In this case, we are using the classic button.
+          The class "navbar-toggle collapsed" specifies that we are using a collapsable navigation bar, meaning that it could be 
+          displayed only when the button is clicked. -->
+
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" 
+              aria-expanded="false">
+
+              <!-- The <span> tag is used to group inline-elements in a document and provides no visual change by itself.  Rather, it 
+              provides a way to add a hook to a part of a text or a part of a document.
+              When a text is hooked in a <span> element, you can style it with CSS, or manipulate it with JavaScript. 
+              Assigning the "sr-only" value to the "class" attribute of the <span> tag makes it readable for screen readers (e.g., 
+              blind people). -->
+
+              <span class="sr-only">Toggle Navigation</span>
+
+              <!-- The "icon-bar" value of the "class" attribute of the <span> tag creates an icon bar (i.e., a bar containing various 
+              icons) with CSS. -->
+
+              <span class="icon-bar"></span>
+
+            </button>
+
+            <!-- The "col" element of the "class" attribute of the <div> tag defines the column size.
+            The Bootstrap grid system has four classes: xs (phones), sm (tablets), md (desktops), and lg (larger desktops). 
+            Each class scales up, so if you wish to set the same widths for phones and tablets, you only need to specify the phone 
+            ("xs").
+            The screen is divided in 12 parts.  So, for instance, the commented out code below creates three columns, with the central 
+            one twice as large as the external ones.
+
+              <div class="row">
+                <div class="col-sm-3">.col-sm-3</div>
+                <div class="col-sm-6">.col-sm-6</div>
+                <div class="col-sm-3">.col-sm-3</div>
+              </div> 
+            
+            In our case, since in the navigation bar we just want to place the small "Lattitude" a width equal to 1/12 of the screen
+            wouls work.  On the page, one can always check the apparence on the various screen by first showing the page code (right
+            click on the page and then select "Insect") and then toggling between the two top bar leftmost icons. -->
+
+            <div class="col-xs-1 phone-nav">
+              <a class="navbar-brand" href="#" id="logo">Lattitude</a>
+            </div>
+          </div>
+
+          <!-- We now gather all the navigation links, forms, and the other content for toggling. -->
+
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+            <!-- The <ul> tag defines an unordered (bulleted) list, as opposed to the <ol> tag, which creates a ordered one (i.e.,
+            starting with numbers instead of bullets). -->
+            
+            <ul class="nav navbar-nav navbar-right">  
+
+              <!-- The <li> tag defines a list item. 
+              The element "dropdown" of the <li> tag defines a dropdown menu containing the four main metheorogical characteristics,
+              found in the folder "visualizations". -->
+
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                  Plots <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                 <li><a href="visualizations/MaxTemp.html">Max Temperature</a></li>
+                  <li><a href="visualizations/Humidity.html">Humidity</a></li>
+                  <li><a href="visualizations/Cloudiness.html">Cloudiness</a></li>
+                  <li><a href="visualizations/WindSpeed.html">Wind Speed</a></li>
+                </ul>
+              </li>
+              
+              <!-- These two list items below are simple HTML links to the "Comparison" site (where all the graphs are hosted) and 
+              the "Data" site, where the dataframe is shown. -->
+
+              <li><a href="comparison_solved_by_me.html">Comparison</a></li>
+              <li><a href="data_solved_by_me.html">Data</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- CONTAINER 
+    Bootstrap imposes that rows must be placed within a .container (fixed-width) or .container-fluid (full-width) for proper alignment
+    and padding. This is the area where we place the main text of the site, as specified in the homework instructions' "landing-lg" 
+    page. 
+    Below, the "section" and "article" tags could equivalently be substited by generic <div> tags, except that their presence improve
+    readibility, in that they show the reader in which part of the page we are. -->
+
+    <div class="container">
+      <section class="row">
+        
+        <!-- We start a column with width equal to 2/3 of the screen, in which we are going to place a picture and the main text.
+        -->
+        
+        <div class="col-md-8">
+          <article class="description-content">
+            
+            <!-- The header, or <h1> tag usually is the title of a post, or other emphasized text on the page. It will usually be the 
+            largest text that stands out.
+            In our case, we copied the section title from the homework instructions. -->
+            
+            <h1 class="description-header">Summary: Latitude vs. X</h1>
+            
+            <!-- The <hr> tag defines a thematic break in an HTML page (e.g. a shift of topic). 
+            In our case, it literally draws the little line below the title. -->
+            
+            <hr class="description-hr"/>
+
+            <!-- The <img> tag defines an image in an HTML page and has two required attributes: "src" and "alt".
+            Images are not technically inserted into an HTML page, but rather linked to the page. The <img> tag creates a holding
+            space for the referenced image. 
+            The "src" attribute of the <img> tag contains the URL where the image is hosted.
+            The "alt" attribute of the <img> tag specifies an alternate text for the image.  Since in this case the homework
+            example doesn't show any alternative text, we can omit this attribute.
+            The optional "id" attribute specifies a unique id for this image. -->
+
+            <img src="assets/images/Fig1.png" id="description-image"/>
+            
+            <!-- The <p> tag defines a paragraph, with </p> signaling the end of paragraph.  Paragraph breaks in the code are
+            irrelevant.
+            Again, in our case, the text comes from the homework visual example. -->
+            
+            <p>The purpose of this project was to analyze how weather changes as you get closer to the equator. To accomplish this 
+              analysis, we first pulled data from the OpenWeatherMap API to assemble a dataset on over 500 cities.</p>
+            <p>After assembling the dataset, we used Matplotlib to plot various aspects of the weather vs. latitude. Factors we 
+              looked at included: temperature, cloudiness, wind speed, and humidity. This site provides the source data and 
+              visualizations created as part of the analysis, as well as explanations and descriptions of any trends and 
+              correlations witnessed.</p>
+          </article>
+        </div>
+        
+        <!-- We start a column using the remaining 1/3 of the screen, where we are going to place four visualization charts. -->
+
+        <div class="col-md-4">
+          <section id="imageNav-area">
+            <div class="imageNav-content">
+              <h2 class="imageNav-header">Visualizations</h2>
+              <hr />
+              <div id="images">
+                <a href="visualizations/MaxTemp.html"><img src="assets/images/Fig1.png" alt="Latitude vs. Max Temperature" 
+                  class="imageNav-photo"></a>
+                <a href="visualizations/Humidity.html"><img src="assets/images/Fig2.png" alt="Latitude vs. Humidity" 
+                  class="imageNav-photo"></a>
+                <a href="visualizations/Cloudiness.html"><img src="assets/images/Fig3.png" alt="Latitude vs. Cloudiness" 
+                  class="imageNav-photo"></a>
+                <a href="visualizations/WindSpeed.html"><img src="assets/images/Fig4.png" alt="Latitude vs. Wind Speed" 
+                  class="imageNav-photo"></a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </div>
+
+    <!-- FOOTER 
+    There is a simple footer indicating that this website has copyrights (see again the homework Landing example). -->
+
+    <footer class="footer navbar-fixed-bottom">
+      <div class="two-toned-footer-color"></div>
+      <p class="text-muted text-muted-footer text-center"> &copy; Copyright Coding Bootcamp 2017</p>
+    </footer>
+
+    <!-- jQuery CDN -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <!-- Bootstrap CDN -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+  </body>
+
+</html>
